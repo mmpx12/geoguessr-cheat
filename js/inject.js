@@ -35,7 +35,6 @@
                     try {
                         var data = this.responseText;
                         document.dispatchEvent(new CustomEvent('PositionEvent', { url : this._url, detail: data }));
-
                     } catch(err) {
                         console.log(err);
                     }

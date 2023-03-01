@@ -1,6 +1,6 @@
 # GEOGUESSR CHEAT
 
-Firefox extention for getting country location in every game (maps, battle royal, streaks) and/or open the lation in google map.
+Firefox extension for getting country location in every game (maps, battle royal, streaks) and/or open the lation in google map.
 
 ![](assets/screenshots/geocheat.png)
 
