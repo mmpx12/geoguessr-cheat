@@ -21,3 +21,19 @@ chrome.runtime.onMessage.addListener(
         }
     }
 );
+
+
+function PlaceMarker() {
+    browser.storage.local.get('coord').then(result => {
+        var lat = result.coord[0];
+        var lon = result.coord[1];
+        chrome.tabs.query({currentWindow: true, active : true}, function(tabId){
+                chrome.tabs.sendMessage(tabId[0].id,{type: "PlaceMarker", lat: lat, lon: lon});
+        });
+    });
+}
+
+browser.webRequest.onBeforeRequest.addListener(
+    PlaceMarker,
+    {urls: ["https://maps.googleapis.com/maps/api/js/ViewportInfoService.GetViewportInfo*"]}
+);

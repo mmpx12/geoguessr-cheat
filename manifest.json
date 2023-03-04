@@ -1,6 +1,6 @@
 {
   "name": "geoguessr cheat",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "mmpx12",
   "homepage_url": "https://github.com/mmpx12/geoguessr-cheat/",
   "description": "Cheat on geoguessr",
@@ -12,16 +12,17 @@
     "128": "assets/images/icon128.png"
   },
   "browser_action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": "assets/images/icon128.png"
   },
 
   "permissions": [
     "webRequest",
-    "webRequestBlocking",
     "activeTab",
     "storage",
     "tabs",
-    "https://www.geoguessr.com/*"
+    "https://www.geoguessr.com/*",
+    "https://maps.googleapis.com/maps/api/js/ViewportInfoService.GetViewportInfo*"
   ],
 
   "content_scripts": [
